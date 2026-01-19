@@ -1,0 +1,39 @@
+.header {
+  width: 100%;
+  background-color: #001f3f;
+  color: #fff;
+  animation: fadeInUp 1s ease forwards;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+  gap: 1.5rem;
+  background-color: #003366;
+}
+
+.nav {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav a {
+  color: #fff;
+  font-weight: 500;
+}
+.nav a:hover {
+  color: #ffcc00;
+}

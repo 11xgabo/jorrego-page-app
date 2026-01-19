@@ -1,0 +1,16 @@
+.footer {
+  background-color: #001f3f;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer .contact p {
+  margin: 0.3rem 0;
+}
+
+.copy {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}

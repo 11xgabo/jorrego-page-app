@@ -1,0 +1,32 @@
+.why {
+  padding: 4rem 2rem;
+  background-color: #e6edf5;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+  color: #001f3f;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.why li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.why li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0077b6;
+}
