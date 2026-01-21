@@ -5,11 +5,11 @@ const Hero = () => {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.content}>
-        <h1>Bienvenido a nuestra empresa</h1>
+        <h1>Southern Chile Shipping and Logistics</h1>
         <p>
-          Especialistas en soluciones corporativas. Secciones y estilo inspirado en diseño profesional marítimo.
+          Specialists in corporate solutions. Sections and style inspired by professional maritime design.
         </p>
-        <button className={styles.cta}>Cotizar Servicio</button>
+        <button className={styles.cta}>Request Quote</button>
       </div>
     </section>
   );

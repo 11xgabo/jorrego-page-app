@@ -4,15 +4,17 @@ import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import Footer from "./components/Footer/Footer";
+import ComingSoon from "./components/ComingSoon/ComingSoon";
 
 function App() {
   return (
     <>
-      <Header />
+      {/*<Header />
       <Hero />
       <Services />
       <WhyChooseUs />
-      <Footer />
+      <Footer />*/}
+      <ComingSoon />
     </>
   );
 }

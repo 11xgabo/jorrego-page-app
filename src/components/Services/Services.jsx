@@ -2,22 +2,22 @@ import React from "react";
 import styles from "./Services.module.css";
 
 const servicesList = [
-  "Carga General",
-  "Gestión de Carga",
-  "Carga Peligrosa",
-  "Transporte de Automóviles"
+  "General Cargo",
+  "Cargo Management",
+  "Hazardous Materials",
+  "Vehicle Transport"
 ];
 
 const Services = () => {
   return (
     <section id="services" className={styles.services}>
-      <h2>Nuestros Servicios</h2>
+      <h2>Our Services</h2>
       <div className={styles.grid}>
         {servicesList.map((service, index) => (
           <div className={styles.card} key={index}>
             <div className={styles.icon}>📦</div>
             <h3>{service}</h3>
-            <p>Descripción breve del servicio.</p>
+            <p>Brief service description.</p>
           </div>
         ))}
       </div>

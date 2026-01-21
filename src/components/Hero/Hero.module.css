@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #003366, #001f3f);
+  background: linear-gradient(135deg, #003366, #003366);
   color: #fff;
   text-align: center;
   padding: 0 2rem;
@@ -20,8 +20,8 @@
 }
 
 .cta {
-  background-color: #ffcc00;
-  color: #001f3f;
+  background-color: #00AEEF;
+  color: #003366;
   border: none;
   padding: 0.8rem 2rem;
   font-size: 1rem;
@@ -31,5 +31,5 @@
 }
 
 .cta:hover {
-  background-color: #e6b800;
+  background-color: #0099d6;
 }

@@ -3,10 +3,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: url('/background.png') center/cover no-repeat;
   color: #fff;
   text-align: center;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 100;
+}
+
+.headerLogo {
+  max-width: 80px;
+  height: auto;
+}
+
+.headerBrand {
+  text-align: left;
+}
+
+.headerBrandName {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.headerBrandSubtitle {
+  font-size: 0.75em;
+  color: #FFFFFF;
+  margin: 2px 0 0 0;
+  letter-spacing: 0.3px;
 }
 
 .container {
@@ -17,6 +52,22 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   animation: fadeInUp 1s ease forwards;
 }
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.titleIcon {
+  width: 64px;
+  height: 64px;
+}
+
+
+
 
 .title {
   font-size: 3em;
@@ -35,14 +86,14 @@
 }
 
 .link {
-  color: #ffd700;
+  color: #00AEEF;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .link:hover {
-  color: #ffea00;
+  color: #C0C0C0;
 }
 
 @keyframes fadeInUp {
