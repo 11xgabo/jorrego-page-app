@@ -5,7 +5,7 @@ const ComingSoon = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
-        <img src="/logo-trans.png" alt="Southern Chile Shipping and Logistics" className={styles.headerLogo} />
+        <img src="/images/logo-trans.png" alt="Southern Chile Shipping and Logistics" className={styles.headerLogo} />
         <div className={styles.headerBrand}>
           <h2 className={styles.headerBrandName}>SOUTHERN CHILE</h2>
           <p className={styles.headerBrandSubtitle}>SHIPPING AND LOGISTICS</p>

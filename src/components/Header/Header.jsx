@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
-import logo from "../../../public/logo-trans.png";
-import southern from "../../../public/southernchile.png";
+import logo from "../../../public/images/logo-trans.png";
+import southern from "../../../public/images/southernchile.png";
 import siteConfig from "../../config/siteConfig";
 import useTranslation from "../../hooks/useTranslation";
 import { useContext } from "react";

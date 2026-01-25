@@ -24,8 +24,8 @@ export const siteConfig = {
 
   // Imágenes/Logos
   assets: {
-    logo: "/logo-trans.png",
-    companyName: "/southernchile.png",
+    logo: "/images/logo-trans.png",
+    companyName: "/images/southernchile.png",
   },
 };
 
