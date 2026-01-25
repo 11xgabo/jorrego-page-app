@@ -1,41 +1,67 @@
 .services {
-  padding: 4rem 2rem;
-  background-color: #FFFFFF;
+  padding: 5rem 2rem;
+  background-color: #ffffff;
   text-align: center;
 }
 
 .services h2 {
-  font-size: 2.5em;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
   color: #003366;
 }
 
+/* GRID */
 .grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
 }
 
+/* CARD */
 .card {
-  background-color: #fff;
-  padding: 2rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  animation: fadeInUp 1s ease forwards;
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #00AEEF;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
 }
 
+/* IMAGE */
+.imageWrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXT CONTENT */
 .card h3 {
-  margin-bottom: 0.5rem;
+  margin: 1.2rem 1.5rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #003366;
 }
 
 .card p {
+  margin: 0 1.5rem 1.5rem;
   font-size: 0.95rem;
-  color: #555;
+  line-height: 1.6;
+  color: #555555;
 }

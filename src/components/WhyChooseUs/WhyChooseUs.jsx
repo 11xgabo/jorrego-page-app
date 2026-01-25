@@ -1,20 +1,23 @@
 import React from "react";
 import styles from "./WhyChooseUs.module.css";
-
-const points = [
-  "Experienced Professionals",
-  "Personalized Attention",
-  "National and International Coverage",
-  "Efficient and Safe Solutions"
-];
+import useTranslation from "../../hooks/useTranslation";
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation();
+
+  const whyList = [
+    "whyChooseUs.professionals",
+    "whyChooseUs.attention",
+    "whyChooseUs.coverage",
+    "whyChooseUs.solutions",
+  ];
+
   return (
     <section id="why-us" className={styles.why}>
-      <h2>Why Choose Us</h2>
+      <h2>{t("whyChooseUs.title")}</h2>
       <ul>
-        {points.map((point, index) => (
-          <li key={index}>✔ {point}</li>
+        {whyList.map((key, index) => (
+          <li key={index}>✔ {t(key)}</li>
         ))}
       </ul>
     </section>

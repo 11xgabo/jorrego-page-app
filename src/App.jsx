@@ -1,4 +1,5 @@
 import React from "react";
+import { LanguageProvider } from "./context/LanguageContext";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
@@ -8,14 +9,14 @@ import ComingSoon from "./components/ComingSoon/ComingSoon";
 
 function App() {
   return (
-    <>
-      {/*<Header />
+    <LanguageProvider>
+      <Header />
       <Hero />
       <Services />
       <WhyChooseUs />
-      <Footer />*/}
-      <ComingSoon />
-    </>
+      <Footer />
+      {/* <ComingSoon /> */}
+    </LanguageProvider>
   );
 }
 

@@ -19,8 +19,8 @@ const ComingSoon = () => {
         <div className={styles.contact}>
           <p>
             In the meantime, contact us by email:{" "}
-            <a href="mailto:info@company.com" className={styles.link}>
-              info@company.com
+            <a href="mailto:contact@southerncsl.com" className={styles.link}>
+              contact@southerncsl.com
             </a>
           </p>
         </div>
