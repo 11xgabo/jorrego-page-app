@@ -161,6 +161,17 @@
   white-space: nowrap;
 }
 
+/* HAMBURGER - HIDDEN ON DESKTOP */
+.hamburger {
+  display: none;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
   .mainBar {
