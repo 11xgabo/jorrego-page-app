@@ -10,9 +10,8 @@ export const siteConfig = {
 
   // Contacto - Datos estáticos de la empresa
   contact: {
-    phone: "+56 9 1234 5678",
+    phone: "+56 9 5208 3769",
     email: "contact@southerncsl.com",
-    address: "Example Address, City, Country",
   },
 
   // Redes sociales (opcional - puedes agregar URLs aquí)

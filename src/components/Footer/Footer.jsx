@@ -9,7 +9,6 @@ const Footer = () => {
   return (
     <footer id="footer" className={styles.footer}>
       <div className={styles.contact}>
-        <p>📍 {siteConfig.contact.address}</p>
         <p>📞 {siteConfig.contact.phone}</p>
         <p>✉ {siteConfig.contact.email}</p>
       </div>

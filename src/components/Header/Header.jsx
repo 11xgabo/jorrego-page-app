@@ -3,18 +3,24 @@ import logo from "../../../public/images/logo-trans.png";
 import southern from "../../../public/images/southernchile.png";
 import siteConfig from "../../config/siteConfig";
 import useTranslation from "../../hooks/useTranslation";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
 
 const Header = () => {
   const { t, language } = useTranslation();
   const { toggleLanguage } = useContext(LanguageContext);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    window.location.href = "/#services";
+  };
 
   const navItems = [
-    { label: t("nav.home"), href: "#hero" },
-    { label: t("nav.services"), href: "#services" },
-    { label: t("nav.about"), href: "#why-us" },
-    { label: t("nav.contact"), href: "#footer" },
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.services"), href: "#", onClick: handleServicesClick },
+    { label: t("nav.about"), href: "/about" },
+    { label: t("nav.contact"), href: "/contact" },
   ];
 
   const handleLogoClick = (e) => {
@@ -25,27 +31,13 @@ const Header = () => {
     }
   };
 
+  const handleLanguageSelect = (lang) => {
+    toggleLanguage();
+    setIsDropdownOpen(false);
+  };
+
   return (
     <header className={styles.header}>
-      {/* TOPVAR - Barra superior */}
-      <div className={styles.topvar}>
-        <div className={styles.languageSelector}>
-          <button
-            onClick={toggleLanguage}
-            className={`${styles.langBtn} ${language === "en" ? styles.active : ""}`}
-          >
-            EN
-          </button>
-          <span className={styles.divider}>|</span>
-          <button
-            onClick={toggleLanguage}
-            className={`${styles.langBtn} ${language === "es" ? styles.active : ""}`}
-          >
-            ES
-          </button>
-        </div>
-      </div>
-
       {/* MAINBAR - Barra principal */}
       <div className={styles.mainBar}>
 
@@ -59,15 +51,36 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul>
             {navItems.map((item, index) => (
-              <li key={index}><a href={item.href}>{item.label}</a></li>
+              <li key={index}><a href={item.href} onClick={item.onClick}>{item.label}</a></li>
             ))}
           </ul>
         </nav>
 
         {/* DERECHA */}
-        <div className={styles.contact}>
-          <span>{siteConfig.contact.phone}</span>
-          <span>{siteConfig.contact.email}</span>
+        <div className={styles.languageDropdown}>
+          <button
+            className={styles.dropdownBtn}
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            title="Cambiar idioma"
+          >
+            {language.toUpperCase()}
+          </button>
+          {isDropdownOpen && (
+            <div className={styles.dropdownMenu}>
+              <button
+                onClick={() => handleLanguageSelect("es")}
+                className={`${styles.dropdownItem} ${language === "es" ? styles.active : ""}`}
+              >
+                Español
+              </button>
+              <button
+                onClick={() => handleLanguageSelect("en")}
+                className={`${styles.dropdownItem} ${language === "en" ? styles.active : ""}`}
+              >
+                English
+              </button>
+            </div>
+          )}
         </div>
 
       </div>

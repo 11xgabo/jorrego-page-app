@@ -1,0 +1,145 @@
+.about {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  padding: 3rem 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.logo {
+  height: 280px;
+  width: auto;
+  filter: drop-shadow(0 8px 16px rgba(0, 51, 102, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.companyImage {
+  height: 70px;
+  width: auto;
+  opacity: 0.9;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: #003366;
+  text-align: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.textSection h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #003366;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.textSection h3:first-child {
+  margin-top: 0;
+}
+
+.textSection p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.valuesList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.valuesList li {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.valuesList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #25D366;
+  font-weight: bold;
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.1);
+  transform: translateY(-4px);
+}
+
+.infoCard h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #003366;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .infoSection {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,126 @@
+.contact {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.contactCard {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contactCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 51, 102, 0.25);
+}
+
+.cardIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contactCard h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 0.75rem;
+}
+
+.contactCard > p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.contactDetail {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #003366;
+  margin: 0;
+}
+
+.whatsappBtn {
+  padding: 1rem 2rem;
+  background-color: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.whatsappBtn:hover {
+  background-color: #20BA58;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsappBtn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .contactOptions {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contactCard {
+    padding: 2rem;
+  }
+}

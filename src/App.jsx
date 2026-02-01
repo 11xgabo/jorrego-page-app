@@ -1,22 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Services from "./components/Services/Services";
-import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
-import Footer from "./components/Footer/Footer";
-import ComingSoon from "./components/ComingSoon/ComingSoon";
+import { Home, AboutPage, ContactPage } from "./pages";
 
 function App() {
   return (
-    <LanguageProvider>
-      <Header />
-      <Hero />
-      <Services />
-      <WhyChooseUs />
-      <Footer />
-      {/* <ComingSoon /> */}
-    </LanguageProvider>
+    <Router>
+      <LanguageProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </LanguageProvider>
+    </Router>
   );
 }
 
