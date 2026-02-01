@@ -10,10 +10,12 @@ const Header = () => {
   const { t, language } = useTranslation();
   const { toggleLanguage } = useContext(LanguageContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleServicesClick = (e) => {
     e.preventDefault();
     window.location.href = "/#services";
+    setIsMobileMenuOpen(false);
   };
 
   const navItems = [
@@ -36,6 +38,10 @@ const Header = () => {
     setIsDropdownOpen(false);
   };
 
+  const handleNavClick = (href) => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className={styles.header}>
       {/* MAINBAR - Barra principal */}
@@ -48,39 +54,59 @@ const Header = () => {
         </a>
 
         {/* CENTRO */}
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.active : ""}`}>
           <ul>
             {navItems.map((item, index) => (
-              <li key={index}><a href={item.href} onClick={item.onClick}>{item.label}</a></li>
+              <li key={index}>
+                <a href={item.href} onClick={(e) => {
+                  item.onClick?.(e);
+                  handleNavClick(item.href);
+                }}>
+                  {item.label}
+                </a>
+              </li>
             ))}
           </ul>
         </nav>
 
         {/* DERECHA */}
-        <div className={styles.languageDropdown}>
-          <button
-            className={styles.dropdownBtn}
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            title="Cambiar idioma"
+        <div className={styles.rightSection}>
+          <div className={styles.languageDropdown}>
+            <button
+              className={styles.dropdownBtn}
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              title="Cambiar idioma"
+            >
+              {language.toUpperCase()}
+            </button>
+            {isDropdownOpen && (
+              <div className={styles.dropdownMenu}>
+                <button
+                  onClick={() => handleLanguageSelect("es")}
+                  className={`${styles.dropdownItem} ${language === "es" ? styles.active : ""}`}
+                >
+                  Español
+                </button>
+                <button
+                  onClick={() => handleLanguageSelect("en")}
+                  className={`${styles.dropdownItem} ${language === "en" ? styles.active : ""}`}
+                >
+                  English
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* HAMBURGER MENU */}
+          <button 
+            className={`${styles.hamburger} ${isMobileMenuOpen ? styles.active : ""}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            title="Menú"
           >
-            {language.toUpperCase()}
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-          {isDropdownOpen && (
-            <div className={styles.dropdownMenu}>
-              <button
-                onClick={() => handleLanguageSelect("es")}
-                className={`${styles.dropdownItem} ${language === "es" ? styles.active : ""}`}
-              >
-                Español
-              </button>
-              <button
-                onClick={() => handleLanguageSelect("en")}
-                className={`${styles.dropdownItem} ${language === "en" ? styles.active : ""}`}
-              >
-                English
-              </button>
-            </div>
-          )}
         </div>
 
       </div>
