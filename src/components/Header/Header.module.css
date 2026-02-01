@@ -160,3 +160,46 @@
 .contact span {
   white-space: nowrap;
 }
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+  .mainBar {
+    padding: 1rem 1rem;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+
+  .brand img {
+    height: 32px;
+  }
+
+  .brand span {
+    font-size: 0.9rem;
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .dropdownBtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainBar {
+    padding: 0.8rem 0.8rem;
+  }
+
+  .brand img {
+    height: 28px;
+  }
+
+  .dropdownBtn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.7rem;
+    border-width: 1px;
+  }
+}
